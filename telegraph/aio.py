@@ -18,7 +18,7 @@ class TelegraphApi:
 
     __slots__ = ('access_token', 'domain', 'session')
 
-    def __init__(self, access_token=None, domain='telegra.ph'):
+    def __init__(self, access_token=None, domain='graph.org'):
         self.access_token = access_token
         self.domain = domain
         self.session = httpx.AsyncClient()
@@ -82,7 +82,7 @@ class Telegraph:
 
     __slots__ = ('_telegraph',)
 
-    def __init__(self, access_token=None, domain='telegra.ph'):
+    def __init__(self, access_token=None, domain='graph.org'):
         self._telegraph = TelegraphApi(access_token, domain)
 
     def get_access_token(self):
